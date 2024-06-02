@@ -9,6 +9,7 @@ const resolvers = {
       return await todoService.getAllTodos();
     },
   },
+
   Mutation: {
     addTodo: async (
       _: any,

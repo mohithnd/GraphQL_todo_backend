@@ -12,6 +12,8 @@ class TodoService {
   }
 
   async createTodo(title: String, tags: String[]) {
+    tags = Array.from(new Set(tags.filter((tag) => tag.length > 0)));
+
     return await this.todoRepository.create(title, tags);
   }
 }
